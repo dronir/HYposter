@@ -275,7 +275,7 @@
 \setbeamertemplate{block begin}{
 	\vskip5ex%
 	\begin{beamercolorbox}[ht=3ex,dp=1ex,center,rounded=false,shadow=false,leftskip=1ex,rightskip=0pt plus 4em, colsep*=.75ex]{block title}%
-		\usebeamerfont*{block title}\insertblocktitle
+		\usebeamerfont*{block title}\MakeUppercase{\insertblocktitle}
 	\end{beamercolorbox}%
 	{\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
 	\usebeamerfont{block body}%
@@ -283,7 +283,6 @@
 	\setlength{\parskip}{1.5ex}%
 	\ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}%
 }
-
 
 \setbeamertemplate{block end}{
   \end{beamercolorbox}
@@ -329,13 +328,13 @@
 
 	% TITLE
 	\begin{column}{0.7\paperwidth}
-		\usebeamercolor{title in headline}{\color{fg}\veryHuge{\inserttitlestart}}\\
-		\usebeamercolor{grey title}{\color{fg}\veryHuge{\inserttitleend}}
+		\usebeamercolor{title in headline}{\color{fg}\veryHuge{\MakeUppercase{\inserttitlestart}}}\\
+		\usebeamercolor{grey title}{\color{fg}\veryHuge{\MakeUppercase{\inserttitleend}}}
 	\end{column}
 
 	% AUTHOR LIST
 	\begin{column}[b]{0.2\paperwidth}
-		\vfill
+		\raggedleft
 		\usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}}
 	\end{column}
 
@@ -345,7 +344,7 @@
 \end{beamercolorbox}
 
 \vskip1ex
-  \begin{beamercolorbox}[wd=\linewidth]{lower separation line head}
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
     \rule{0pt}{2pt}
   \end{beamercolorbox}
 \vskip10ex
