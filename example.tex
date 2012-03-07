@@ -1,0 +1,125 @@
+\documentclass[final]{beamer}
+\mode<presentation> {
+  \usetheme{HYposter}
+}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amsthm, amssymb, latexsym}
+\usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
+
+% Set up the title and author info
+\titlestart{Pretty posters with \LaTeX}
+\titleend{using the HYposter style}
+\author[Wilkman]{Olli Wilkman}
+\institute[University of Helsinki]{}
+\date{\today}
+
+
+\begin{document}
+\begin{frame}[t, fragile]
+\begin{columns}[T]
+	
+% First column starts here
+\begin{column}{0.32\linewidth}
+
+
+\begin{block}{\LaTeX~POSTERS MADE EASIER}
+The \texttt{HYposter} style enables you to make scientific posters with a University of Helsinki look using  \texttt{beamerposter} package for \LaTeX. 
+
+The official poster templates for the university are available only for Microsoft PowerPoint and Adobe InDesign, which are not easily available to all researchers. \LaTeX, on the other hand, is free and works on almost all computer systems commonly used.
+
+\end{block}
+
+
+\begin{block}{THE LOOK}
+This poster style does not exactly conform to the official poster style of the university, but it tries to do a good enough job. The official poster style has a very large flame logo, and the header part takes up about a third of the page. This has been toned down a bit to save space.
+
+The background of the poster is white and the text is black. The block headings are in the faculty colour. The first line of the poster title is in the faculty colour and the rest in neutral grey. In the upper right the name of the university is set in neutral grey and the faculty name in the faculty colour.
+
+The colour values used for the faculty colours were taken with a colour picker tool from the faculties' web graphics. They should look good enough when printed.
+
+The layout is three-column.
+\end{block}
+
+
+\begin{block}{USING THE PACKAGE}
+
+\texttt{HYposter} is a style definition for \texttt{beamerposter}, which itself is a package that uses the \texttt{beamer} document class to produce posters. This means you need to install both \texttt{beamer} and \texttt{beamerposter} in order it to work.
+
+The headers should be in FULL CAPS to conform with the university style. This is not done automatically They should also include the \texttt{\\large} command to make them a better size.
+\end{block}
+
+\end{column}
+
+% Second column starts here
+\begin{column}{0.32\linewidth}
+
+% First block
+\begin{block}{VERSATILITY}
+This is the cool part: the poster can be rendered in the colours of any of the faculties of our university simply by changing one option. It also automatically changes the name of the faculty in the header. Everything happens under the hood, and the user does not need to worry.
+
+\end{block}
+
+\begin{block}{THE COLOUR OPTIONS}
+
+\begin{center}
+\begin{tabular}{l}
+Faculty of Agriculture and Forestry \\
+Faculty of Arts \\
+Faculty of Behavioural Sciences \\
+Faculty of Biological and Environmental Sciences \\
+Faculty of Law \\
+Faculty of Medicine \\
+Faculty of Pharmacy \\
+Faculty of Science \\
+Faculty of Social Sciences \\
+Faculty of Theology \\
+Faculty of Veterinary Medicine \\
+Swedish School of Social Science \\
+Plain black
+\end{tabular}
+\end{center}
+
+\end{block}
+
+\begin{block}{SOMETHING}
+\end{block}
+
+
+% Third column
+\end{column}
+
+\begin{column}{0.32\linewidth}
+
+\begin{block}{EXAMPLE 1: MATH}
+	You can use all the nice math features of \LaTeX~in your poster:
+
+	\begin{equation}
+		f(x) = \frac{1}{2}\left(\frac{1}{1+x} + 1\right)
+	\end{equation}	
+
+	Unfortunately right now there are still some problems with the scaling of the math fonts:
+
+	\begin{equation}
+		\sum_{n=0}^\infty \frac{1}{2^n} = 2
+	\end{equation}
+	
+
+
+\end{block}
+	
+	
+\begin{block}{EXAMPLE 2: IMAGES}
+	Including images is simple. With \pdfLaTeX, you can use images in many common formats, including PNG and JPEG, but in a poster you should strive to use scaleable graphics by putting them in pdf format.
+
+
+
+\end{block}
+	
+\end{column}
+
+\end{columns}
+\end{frame}
+\end{document}
