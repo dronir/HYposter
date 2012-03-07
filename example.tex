@@ -1,6 +1,6 @@
 \documentclass[final]{beamer}
 \mode<presentation> {
-  \usetheme{HYposter}
+  \usetheme[mat]{HYposter}
 }
 
 % Change faculty colours on line 3 by setting \usetheme[<id>]{HYposter}.
@@ -45,7 +45,7 @@
 \begin{block}{\LaTeX~POSTERS MADE EASIER}
 The \texttt{HYposter} style enables you to make scientific posters with a University of Helsinki look using  \texttt{beamerposter} package for \LaTeX. 
 
-The official poster templates for the university are available only for Microsoft PowerPoint and Adobe InDesign, which are not easily available to all researchers. \LaTeX, on the other hand, is free and works on almost all computer systems commonly used.
+The official poster templates for the university are available only for Microsoft PowerPoint and Adobe InDesign, which are not easily available to all researchers. \LaTeX, on the other hand, is free and works on almost all computer systems commonly used. It also has superior capabilities in typesetting mathematical formulas.
 
 \end{block}
 
@@ -57,7 +57,7 @@ The background of the poster is white and the text is black. The block headings 
 
 The colour values used for the faculty colours were taken with a colour picker tool from the faculties' web graphics. They should look good enough when printed.
 
-The layout is three-column.
+The layout of the official poster and this example is three-column, but the number of columns is variable. See the documentation of \texttt{beamer} for more details about columns.
 \end{block}
 
 
@@ -76,32 +76,36 @@ The headers should be in FULL CAPS to conform with the university style. This is
 % First block
 \begin{block}{VERSATILITY}
 This is the cool part: the poster can be rendered in the colours of any of the faculties of our university simply by changing one option. It also automatically changes the name of the faculty in the header. Everything happens under the hood, and the user does not need to worry.
-
 \end{block}
 
 \begin{block}{THE COLOUR OPTIONS}
+\begin{itemize}
+\item Faculty of Agriculture and Forestry 
+\item Faculty of Arts 
+\item Faculty of Behavioural Sciences 
+\item Faculty of Biological and Environmental Sciences 
+\item Faculty of Law 
+\item Faculty of Medicine 
+\item Faculty of Pharmacy 
+\item Faculty of Science 
+\item Faculty of Social Sciences 
+\item Faculty of Theology 
+\item Faculty of Veterinary Medicine 
+\item Swedish School of Social Science 
+\item Plain black
+\end{itemize}
+\end{block}
 
-\begin{center}
-\begin{tabular}{l}
-Faculty of Agriculture and Forestry \\
-Faculty of Arts \\
-Faculty of Behavioural Sciences \\
-Faculty of Biological and Environmental Sciences \\
-Faculty of Law \\
-Faculty of Medicine \\
-Faculty of Pharmacy \\
-Faculty of Science \\
-Faculty of Social Sciences \\
-Faculty of Theology \\
-Faculty of Veterinary Medicine \\
-Swedish School of Social Science \\
-Plain black
-\end{tabular}
-\end{center}
-
+\begin{block}{WHERE CAN I FIND IT?}
+HYposter is hosted at Github for ease of development and cooperation. Get it at \url{https://github.com/dronir/HYposter}.
 \end{block}
 
 
+\begin{block}{CAN I HELP?}
+There are many things that still don't work quite as well as I'd like. The math fonts don't seem to always scale properly, and I haven't figured out how to format the author names nicely yet. Also the spacing between the block headers and text paragraphs is a bit odd.
+
+Contributions and comments are always welcome. Contribute on Github or send email to \url{olli.wilkman@iki.fi}.
+\end{block}
 
 
 % Third column
@@ -127,9 +131,18 @@ Plain black
 \end{block}
 	
 	
-\begin{block}{EXAMPLE 2: IMAGES}
-	Including images is simple. With \pdfLaTeX, you can use images in many common formats, including PNG and JPEG, but in a poster you should strive to use scaleable graphics by putting them in pdf format.
+\begin{block}{EXAMPLE 2: IMAGES AND REFERENCES}
+Including images is simple.  With pdf\LaTeX, you can use images in many common formats, including PNG and JPEG, but in a poster you should strive to use scaleable graphics by putting them in pdf format.
+	
+Using labels to refer to figures and tables is also simple, as demonstrated by this reference to Figure \ref{examplefigure}.
 
+\begin{figure}
+\includegraphics[width=0.8\textwidth]{zeros.png}
+\label{examplefigure}
+\caption{Some mathematical plot}
+\end{figure}
+
+Image courtesy of Janne Korhonen.
 
 
 \end{block}
