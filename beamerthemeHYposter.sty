@@ -144,6 +144,7 @@
 \setbeamercolor{author in headline}{fg=black}
 \setbeamercolor{institute in headline}{fg=TDK}
 \setbeamercolor{logo in headline}{fg=black,bg=white}
+\setbeamercolor{frame title}{fg=TDK,bg=white}
 
 % lines
 %\setbeamercolor{upper separation line head}{fg=ta2orange}
@@ -165,36 +166,28 @@
 \setbeamercolor*{example title}{fg=TDK,bg=white}
 \setbeamerfont{example title}{size=\large,series=\bf,bg=white,fg=TDK}
 
-%\setbeamercolor*{example body}{fg=white,bg=i6colorscheme4}
-%\setbeamercolor*{example title}{fg=white,bg=i6colorscheme1}
-
-%  \setbeamercolor{framesubtitle}{fg=ta3orange, bg=ta2gray}
-%  \setbeamercolor{author in head/foot}{fg=tabutter, bg=black}
-%  \setbeamercolor{title in head/foot}{bg=tabutter, fg=black}
-
 \setbeamercolor{alerted text}{fg=TDK}
 
 \setbeamercolor{grey title}{fg=grey55,bg=white}
 \setbeamercolor{faculty title}{fg=grey55,bg=white}
 
-%\setbeamercolor{example text}{fg=taorange}
-%\setbeamercolor{structure}{fg=ta3skyblue}
+\setbeamercolor{itemize item}{fg=TDK,bg=white}
 
 \setbeamertemplate{itemize items}[triangle]
 \setbeamertemplate{navigation symbols}{}  % no navigation on a poster
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setbeamertemplate{block begin}{
-  \vskip.75ex
-  \begin{beamercolorbox}[ht=3ex,dp=1ex,center,rounded=false,shadow=false,leftskip=1cm,colsep*=.75ex]{block title}%
-    \usebeamerfont*{block title}\insertblocktitle
-  \end{beamercolorbox}%
-  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
-  \usebeamerfont{block body}%
-\setlength{\parskip}{1.5ex}
-  \begin{beamercolorbox}[rounded=false,shadow=false,leftskip=1cm,colsep*=.75ex,sep=2ex,vmode]{block body}%
-    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
-  }
+	\vskip5ex%
+	\begin{beamercolorbox}[ht=3ex,dp=1ex,center,rounded=false,shadow=false,leftskip=1ex,rightskip=0pt plus 4em, colsep*=.75ex]{block title}%
+		\usebeamerfont*{block title}\insertblocktitle
+	\end{beamercolorbox}%
+	{\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+	\usebeamerfont{block body}%
+	\begin{beamercolorbox}[rounded=false,shadow=false,leftskip=1cm,colsep*=.75ex,sep=1ex,vmode]{block body}%
+	\setlength{\parskip}{1.5ex}%
+	\ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}%
+}
 
 
 \setbeamertemplate{block end}{
@@ -202,6 +195,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is the title part
 \setbeamertemplate{headline}{  
   \leavevmode
 
@@ -212,7 +206,6 @@
       \begin{column}{.20\paperwidth}
         \vskip15ex
         \includegraphics[width=0.18\paperwidth]{\flame}
-       
 
       \end{column}
       \begin{column}{.70\paperwidth}
@@ -256,7 +249,7 @@
 \end{beamercolorbox}
 
 \vskip1ex
-  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+  \begin{beamercolorbox}[wd=\linewidth]{lower separation line head}
     \rule{0pt}{2pt}
   \end{beamercolorbox}
 \vskip10ex
@@ -265,7 +258,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setbeamertemplate{footline}{
   \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
-    \rule{0pt}{2pt}
+ %   \rule{0pt}{2pt}
   \end{beamercolorbox}
   
   \leavevmode%
@@ -279,7 +272,7 @@
   \end{beamercolorbox}
   \vskip0pt%
   \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
-    \rule{0pt}{2pt}
+%    \rule{0pt}{2pt}
   \end{beamercolorbox}
 }
 
