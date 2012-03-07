@@ -3,8 +3,8 @@
   \usetheme[mat]{HYposter}
 }
 
-% Change faculty colours on line 3 by setting \usetheme[<id>]{HYposter}.
-% The different faculty ids are:
+% Change colours on line 3 by setting \usetheme[<id>]{HYposter}.
+% The different ids are:
 %  maa: Faculty of Agriculture and Forestry 
 %  hum: Faculty of Arts 
 %  kay: Faculty of Behavioural Sciences 
@@ -17,6 +17,18 @@
 %  teo: Faculty of Theology 
 %  ell: Faculty of Veterinary Medicine 
 %  soc: Swedish School of Social Science 
+%  kir: University of Helsinki Library
+%  avo: Open University
+%  ale: Aleksanteri Institute
+%  neu: Neuroscience Institute
+%  biot: Bioscience Institute
+%  atk: Computer centre
+%  rur: Ruralia Institute
+%  koe: Laboratory animal centre
+%  kol: Collegium for Advanced Studies
+%  til: Center for Properties and Facilities
+%  pal: Palmenia
+%  kie: Language centre
 % Without options a black theme without faculty name will be used.
 
 \usepackage[english]{babel}
@@ -27,8 +39,8 @@
 \usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
 
 % Set up the title and author info
-\titlestart{Pretty posters with \LaTeX}
-\titleend{using the HYposter style}
+\titlestart{PRETTY POSTERS WITH \LaTeX}
+\titleend{USING THE HYposter STYLE}
 \author[Wilkman]{Olli Wilkman}
 \institute[University of Helsinki]{}
 \date{\today}
@@ -55,8 +67,6 @@ This poster style does not exactly conform to the official poster style of the u
 
 The background of the poster is white and the text is black. The block headings are in the faculty colour. The first line of the poster title is in the faculty colour and the rest in neutral grey. In the upper right the name of the university is set in neutral grey and the faculty name in the faculty colour.
 
-The colour values used for the faculty colours were taken with a colour picker tool from the faculties' web graphics. They should look good enough when printed.
-
 The layout of the official poster and this example is three-column, but the number of columns is variable. See the documentation of \texttt{beamer} for more details about columns.
 \end{block}
 
@@ -76,6 +86,8 @@ The headers should be in FULL CAPS to conform with the university style. This is
 % First block
 \begin{block}{VERSATILITY}
 This is the cool part: the poster can be rendered in the colours of any of the faculties of our university simply by changing one option. It also automatically changes the name of the faculty in the header. Everything happens under the hood, and the user does not need to worry.
+
+The style supports all of the university's different faculties and special departments which have an official colour scheme.
 \end{block}
 
 \begin{block}{THE COLOUR OPTIONS}
@@ -91,8 +103,20 @@ This is the cool part: the poster can be rendered in the colours of any of the f
 \item Faculty of Social Sciences 
 \item Faculty of Theology 
 \item Faculty of Veterinary Medicine 
-\item Swedish School of Social Science 
-\item Plain black
+\item Swedish School of Social Science
+\item Aleksanteri Institute
+\item Center for Information Technology
+\item Center for Properties and Facilities
+\item Helsinki Collegium for Advanced Studies
+\item Institute of Biotechnology
+\item Laboratory Animal Centre
+\item Language Centre
+\item Neuroscience Center
+\item Open University
+\item Palmenia Centre for Continuing Education
+\item Ruralia Institute
+\item University of Helsinki Library
+\item None (plain black and white)
 \end{itemize}
 \end{block}
 
@@ -100,12 +124,6 @@ This is the cool part: the poster can be rendered in the colours of any of the f
 HYposter is hosted at Github for ease of development and cooperation. Get it at \url{https://github.com/dronir/HYposter}.
 \end{block}
 
-
-\begin{block}{CAN I HELP?}
-There are many things that still don't work quite as well as I'd like. The math fonts don't seem to always scale properly, and I haven't figured out how to format the author names nicely yet. Also the spacing between the block headers and text paragraphs is a bit odd.
-
-Contributions and comments are always welcome. Contribute on Github or send email to \url{olli.wilkman@iki.fi}.
-\end{block}
 
 
 % Third column
@@ -143,8 +161,12 @@ Using labels to refer to figures and tables is also simple, as demonstrated by t
 \end{figure}
 
 Image courtesy of Janne Korhonen.
+\end{block}
 
+\begin{block}{CAN I HELP?}
+There are many things that still don't work quite as well as I'd like. The math fonts don't seem to always scale properly, and I haven't figured out how to format the author names nicely yet. Also the spacing between the block headers and text paragraphs is a bit odd.
 
+Contributions and comments are always welcome. Contribute on Github or send email to \url{olli.wilkman@iki.fi}.
 \end{block}
 	
 \end{column}

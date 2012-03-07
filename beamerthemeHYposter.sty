@@ -94,29 +94,125 @@
 	\colorlet{TDK}{Soc}
 	\renewcommand{\tdknimi}{SVENSKA SOCIAL- OCH KOMMUNALHÖGSKOLAN}
 	\renewcommand{\tdknamn}{SWEDISH SCHOOL OF SOCIAL SCIENCE}
-	\renewcommand{\tdkname}{IF YOU CAN SEE THIS, SOMETHING IS WRONG}
-	\setbeamercolor{last institute line}{fg=white}
+	\renewcommand{\tdkname}{\mbox{}}
 	\renewcommand{\flame}{flame_soc.pdf}
 }
+
+\DeclareOption{ale}{
+	\colorlet{TDK}{Ale}
+	\renewcommand{\tdknimi}{ALEKSANTERI-INSTITUUTTI}
+	\renewcommand{\tdknamn}{ALEXANDERINSTITUTET}
+	\renewcommand{\tdkname}{ALEXANTERI INSTITUTE}
+}
+
+\DeclareOption{kir}{
+	\colorlet{TDK}{Kir}
+	\renewcommand{\tdknimi}{HELSINGIN YLIOPISTON KIRJASTO}
+	\renewcommand{\tdknamn}{HELSINGFORS UNIVERSITETS BIBLIOTEK}
+	\renewcommand{\tdkname}{HELSINKI UNIVERSITY LIBRARY}
+}
+
+\DeclareOption{kie}{
+	\colorlet{TDK}{Kie}
+	\renewcommand{\tdknimi}{KIELIKESKUS}
+	\renewcommand{\tdknamn}{SPRÅKCENTRUM}
+	\renewcommand{\tdkname}{LANGUAGE CENTRE}
+}
+
+\DeclareOption{til}{
+	\colorlet{TDK}{Til}
+	\renewcommand{\tdknimi}{TILA- JA KIINTEISTÖKESKUS}
+	\renewcommand{\tdknamn}{LOKAL- OCH FASTIGHETSCENTER}
+	\renewcommand{\tdkname}{CENTER FOR PROPERTIES AND FACILITIES}
+}
+
+\DeclareOption{rur}{
+	\colorlet{TDK}{Rur}
+	\renewcommand{\tdknimi}{RURALIA-INSTITUUTTI}
+	\renewcommand{\tdknamn}{RURALIA-INSTITUTET}
+	\renewcommand{\tdkname}{RURALIA INSTITUTE}
+}
+
+\DeclareOption{atk}{
+	\colorlet{TDK}{Atk}
+	\renewcommand{\tdknimi}{TIETOTEKNIIKKAKESKUS}
+	\renewcommand{\tdknamn}{CENTER FÖR INFORMATIONSTEKNOLOGI}
+	\renewcommand{\tdkname}{CERTER FOR INTERMATION TECHNOLOGY}
+}
+
+\DeclareOption{kol}{
+	\colorlet{TDK}{Kol}
+	\renewcommand{\tdknimi}{TUTKIJAKOLLEGIUM}
+	\renewcommand{\tdknamn}{FORSKARKOLLEGIET}
+	\renewcommand{\tdkname}{HELSINKI COLLEGIUM FOR ADVANCED STUDIES}
+}
+
+\DeclareOption{avo}{
+	\colorlet{TDK}{Avo}
+	\renewcommand{\tdknimi}{AVOIN YLIOPISTO}
+	\renewcommand{\tdknamn}{ÖPPNA UNIVERSITETET}
+	\renewcommand{\tdkname}{OPEN UNIVERSITY}
+}
+
+\DeclareOption{neu}{
+	\colorlet{TDK}{Neu}
+	\renewcommand{\tdknimi}{NEUROTIETEEN TUTKIMUSKESKUS}
+	\renewcommand{\tdknamn}{CENTRUM FÖR NEUROVETENSKAP}
+	\renewcommand{\tdkname}{NEUROSCIENCE CENTER}
+}
+
+\DeclareOption{biot}{
+	\colorlet{TDK}{Biot}
+	\renewcommand{\tdknimi}{BIOTEKNIIKAN INSTITUUTTI}
+	\renewcommand{\tdknamn}{INTITUTET FÖR BIOTEKNOLOGI}
+	\renewcommand{\tdkname}{INSTITUTE OF BIOTECHNOLOGY}
+}
+
+\DeclareOption{koe}{
+	\colorlet{TDK}{Koe}
+	\renewcommand{\tdknimi}{KOE-ELÄINKESKUS}
+	\renewcommand{\tdknamn}{FÖRSÖKDJURSENHETEN}
+	\renewcommand{\tdkname}{LABORATORY ANIMAL CENTRE}
+}
+
+\DeclareOption{palmenia}{
+	\colorlet{TDK}{Pal}
+	\renewcommand{\tdknimi}{KOULUTUS- JA KEHITTÄMISKESKUS PALMENIA}
+	\renewcommand{\tdknamn}{UTBILDNINGS- OCH UTVECKLINGSCENTRET PALMENIA}
+	\renewcommand{\tdkname}{PALMENIA CENTRE FOR CONTINUING EDUCATION}
+}
+
 
 \selectcolormodel{rgb}
 \mode<presentation>
 
 
 
-\definecolor{grey55}{rgb}{0.55, 0.55, 0.55}  %  title grey
-\definecolor{Mat}{rgb}{0.99, 0.64, 0.07}  %  matemaattis-luonnontieteellinen
-\definecolor{Hum}{rgb}{0.23, 0.46, 0.77}  %  humanistinen
-\definecolor{Teo}{rgb}{0.57, 0.35, 0.78}  %  teologinen
-\definecolor{Oik}{rgb}{0.70, 0.00, 0.29}  %  oikis
-\definecolor{Med}{rgb}{0.00, 0.64, 0.60}  %  lääkis
-\definecolor{Val}{rgb}{0.90, 0.02, 0.23}  %  valtsika
-\definecolor{Maa}{rgb}{0.00, 0.69, 0.55}  %  lehmä- ja mehtätieteellinen
-\definecolor{Ell}{rgb}{0.00, 0.62, 0.38}  %  eläinlääkis
-\definecolor{Bio}{rgb}{0.36, 0.75, 0.13}  %  bio- ja ympäristö
-\definecolor{Far}{rgb}{0.00, 0.74, 0.62}  %  farmasia
-\definecolor{Kay}{rgb}{0.99, 0.82, 0.09}  %  käyttis
-\definecolor{Soc}{rgb}{0.90, 0.20, 0.46}  %  sockom
+\definecolor{grey55}{RGB}{140, 140, 140}  %  title grey
+\definecolor{Mat}{RGB}{252, 163, 17}  %  matemaattis-luonnontieteellinen
+\definecolor{Hum}{RGB}{58, 111, 196}  %  humanistinen
+\definecolor{Teo}{RGB}{146, 88, 200}  %  teologinen
+\definecolor{Oik}{RGB}{140, 0, 50}  %  oikis
+\definecolor{Med}{RGB}{0, 163, 154}  %  lääkis
+\definecolor{Val}{RGB}{229, 5, 58}  %  valtsika
+\definecolor{Maa}{RGB}{0, 176, 140}  %  lehmä- ja mehtätieteellinen
+\definecolor{Ell}{RGB}{0, 158, 96}  %  eläinlääkis
+\definecolor{Bio}{RGB}{91, 191, 33}  %  bio- ja ympäristö
+\definecolor{Far}{RGB}{0, 189, 157}  %  farmasia
+\definecolor{Kay}{RGB}{252, 209, 22}  %  käyttis
+\definecolor{Soc}{RGB}{230, 51, 117}  %  sockom
+\definecolor{Kie}{RGB}{233, 29, 85}  %  kielikeskus
+\definecolor{Koe}{RGB}{70, 148, 157}  %  koe-eläin
+\definecolor{Avo}{RGB}{237, 160, 79}  %  avoin
+\definecolor{Ale}{RGB}{37, 110, 199}  %  aleksanteri-instituutti
+\definecolor{Biot}{RGB}{155, 111, 168}  %  biotiede-instituutti
+\definecolor{Neu}{RGB}{147, 149, 179}  %  neurotiedeinstituutti
+\definecolor{Pal}{RGB}{255, 204, 73}  %  palmenia
+\definecolor{Kol}{RGB}{227, 147, 4}  %  tutkijakollegium
+\definecolor{Rur}{RGB}{142, 172, 125}  %  ruralia
+\definecolor{Atk}{RGB}{21, 190, 240}  %  atk-osasto
+\definecolor{Til}{RGB}{94, 160, 63}  %  tilakeskus
+\definecolor{Kir}{RGB}{163, 175, 7}  %  kirjasto
 
 \newcommand{\flame}{flame.pdf}
 \newcommand{\tdknimi}{\mbox{}}
@@ -127,11 +223,7 @@
 \newcommand{\titlestart}[1]{\newcommand{\inserttitlestart}{#1}}
 \newcommand{\titleend}[1]{\newcommand{\inserttitleend}{#1}}
 
-
-
 \title{\inserttitlestart~\inserttitleend}
-
-\setbeamercolor{last institute line}{fg=TDK}
 
 
 \ProcessOptions\relax
@@ -217,9 +309,10 @@
         \usebeamercolor{grey title}{\color{fg}\normalsize{HELSINGIN YLIOPISTO}\\[1ex]}
         \usebeamercolor{grey title}{\color{fg}\normalsize{HELSINGFORS UNIVERSITET}\\[1ex]}
         \usebeamercolor{grey title}{\color{fg}\normalsize{UNIVERSITY OF HELSINKI}\\[1ex]}     
+        \vskip1ex
         \usebeamercolor{institute in headline}{\color{fg}\normalsize{\tdknimi}\\[1ex]}
         \usebeamercolor{institute in headline}{\color{fg}\normalsize{\tdknamn}\\[1ex]}
-        \usebeamercolor{last institute line}{\color{fg}\normalsize{\tdkname}\\[1ex]}
+        \usebeamercolor{institute in headline}{\color{fg}\normalsize{\tdkname}\\[1ex]}
       \end{column}
 
       \begin{column}{.05\paperwidth}
