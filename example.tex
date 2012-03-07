@@ -36,13 +36,13 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage{amsmath,amsthm, amssymb, latexsym}
-\usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
+\usepackage[orientation=portrait,size=a0,scale=1.4]{beamerposter}
 
 % Set up the title and author info
 \titlestart{Pretty Posters With \LaTeX}
 \titleend{Using the HYposter Style}
-\author[Wilkman]{Olli Wilkman}
-\institute[University of Helsinki]{}
+\author[Wilkman]{Olli Wilkman,\\ Someone Else\\ and Someone Yet Different}
+\leftcorner{}
 \date{\today}
 
 
@@ -55,10 +55,9 @@
 
 
 \begin{block}{\LaTeX~posters made easier}
-The \texttt{HYposter} style enables you to make scientific posters with a University of Helsinki look using  \texttt{beamerposter} package for \LaTeX. 
+The \texttt{HYposter} style enables you to make scientific posters with a University of Helsinki look using  the \texttt{beamerposter} package for \LaTeX. 
 
-The official poster templates for the university are available only for Microsoft PowerPoint and Adobe InDesign, which are not easily available to all researchers. \LaTeX, on the other hand, is free and works on almost all computer systems commonly used. It also has superior capabilities in typesetting mathematical formulas.
-
+The official poster templates for the university are available only for Microsoft PowerPoint and Adobe InDesign, expensive pieces of software which are not easily available to all researchers. \LaTeX, on the other hand, is free and works on almost all computer systems commonly used. It also has superior capabilities in typesetting mathematical formulas.
 \end{block}
 
 
@@ -72,7 +71,6 @@ The layout of the official poster and this example is three-column, but the numb
 
 
 \begin{block}{Using the package}
-
 \texttt{HYposter} is a style definition for \texttt{beamerposter}, which itself is a package that uses the \texttt{beamer} document class to produce posters. This means you need to install both \texttt{beamer} and \texttt{beamerposter} in order it to work.
 
 The headers should be in FULL CAPS to conform with the university style, this is done automatically.
@@ -85,7 +83,7 @@ The headers should be in FULL CAPS to conform with the university style, this is
 
 % First block
 \begin{block}{Versatility}
-This is the cool part: the poster can be rendered in the colours of any of the faculties of our university simply by changing one option. It also automatically changes the name of the faculty in the header. Everything happens under the hood, and the user does not need to worry.
+This is the cool part: the poster can be rendered in any of the university's colour themes. It also automatically changes the name of the faculty or department in the header. Everything happens under the hood, and the user does not need to worry about the appearance of the poster at all, only the contents.
 
 The style supports all of the university's different faculties and special departments which have an official colour scheme.
 \end{block}

@@ -223,6 +223,9 @@
 \newcommand{\titlestart}[1]{\newcommand{\inserttitlestart}{#1}}
 \newcommand{\titleend}[1]{\newcommand{\inserttitleend}{#1}}
 
+\newcommand{\insertleftcorner}{}
+\newcommand{\leftcorner}[1]{\renewcommand{\insertleftcorner}{#1}}
+
 \title{\inserttitlestart~\inserttitleend}
 
 
@@ -291,34 +294,34 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This is the title part
 \setbeamertemplate{headline}{  
-  \leavevmode
+%  \leavevmode
 
   \begin{beamercolorbox}[wd=\paperwidth]{headline}
     \begin{columns}[T]
 		\begin{column}{0.05\paperwidth}
 		\end{column}
       \begin{column}{.20\paperwidth}
-        \vskip15ex
-        \includegraphics[width=0.18\paperwidth]{\flame}
+        \vskip5ex
+        \includegraphics[width=0.125\paperwidth]{\flame}
 
       \end{column}
       \begin{column}{.70\paperwidth}
-        \vskip20ex
-        \raggedleft
-        \usebeamercolor{grey title}{\color{fg}\normalsize{HELSINGIN YLIOPISTO}\\[1ex]}
-        \usebeamercolor{grey title}{\color{fg}\normalsize{HELSINGFORS UNIVERSITET}\\[1ex]}
-        \usebeamercolor{grey title}{\color{fg}\normalsize{UNIVERSITY OF HELSINKI}\\[1ex]}     
-        \vskip1ex
-        \usebeamercolor{institute in headline}{\color{fg}\normalsize{\tdknimi}\\[1ex]}
-        \usebeamercolor{institute in headline}{\color{fg}\normalsize{\tdknamn}\\[1ex]}
-        \usebeamercolor{institute in headline}{\color{fg}\normalsize{\tdkname}\\[1ex]}
+%        \vskip20ex
+%        \raggedleft
+%        \usebeamercolor{grey title}{\color{fg}\normalsize{HELSINGIN YLIOPISTO}\\[1ex]}
+%        \usebeamercolor{grey title}{\color{fg}\normalsize{HELSINGFORS UNIVERSITET}\\[1ex]}
+%        \usebeamercolor{grey title}{\color{fg}\normalsize{UNIVERSITY OF HELSINKI}\\[1ex]}     
+%        \vskip1ex
+%        \usebeamercolor{institute in headline}{\color{fg}\normalsize{\tdknimi}\\[1ex]}
+%        \usebeamercolor{institute in headline}{\color{fg}\normalsize{\tdknamn}\\[1ex]}
+%        \usebeamercolor{institute in headline}{\color{fg}\normalsize{\tdkname}\\[1ex]}
       \end{column}
 
       \begin{column}{.05\paperwidth}
       \end{column}
     \end{columns}
 
-\vskip10ex
+\vskip5ex
 \end{beamercolorbox}
 
 \begin{beamercolorbox}[wd=\paperwidth]{title and author}
@@ -327,14 +330,15 @@
 	\end{column}
 
 	% TITLE
-	\begin{column}[b]{0.7\paperwidth}
+	\begin{column}[b]{0.6\paperwidth}
 		\usebeamercolor{title in headline}{\color{fg}\veryHuge{\MakeUppercase{\inserttitlestart}}}\\
 		\usebeamercolor{grey title}{\color{fg}\veryHuge{\MakeUppercase{\inserttitleend}}}
 	\end{column}
 
 	% AUTHOR LIST
-	\begin{column}[b]{0.2\paperwidth}
+	\begin{column}[b]{0.3\paperwidth}
 		\raggedleft
+		 \renewcommand{\baselinestretch}{2}
 		\usebeamercolor{author in headline}{\color{fg}\normalsize{\insertauthor}}
 	\end{column}
 
@@ -352,23 +356,34 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setbeamertemplate{footline}{
-  \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
- %   \rule{0pt}{2pt}
-  \end{beamercolorbox}
+%  \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+%   \rule{0pt}{2pt}
+%  \end{beamercolorbox}
   
   \leavevmode%
-  \begin{beamercolorbox}[ht=4ex,leftskip=1cm,rightskip=1cm]{footline}%
-    \insertinstitute
-    \hfill
-    \url{}
-    \hfill
-    \texttt{}
-    \vskip1ex
+  \begin{beamercolorbox}[ht=6ex,leftskip=1cm,rightskip=1cm]{footline}%
+    \begin{columns}[b]
+      \begin{column}[b]{0.02\paperwidth}
+      \end{column}
+      \begin{column}[b]{.20\paperwidth}
+      \insertleftcorner
+      \end{column}
+      \begin{column}[b]{.70\paperwidth}
+        \raggedleft
+        \usebeamercolor{grey title}{\color{fg}\normalsize{HELSINGIN YLIOPISTO}\\[1ex]}
+        \usebeamercolor{grey title}{\color{fg}\normalsize{HELSINGFORS UNIVERSITET}\\[1ex]}
+        \usebeamercolor{grey title}{\color{fg}\normalsize{UNIVERSITY OF HELSINKI}\\[1ex]}     
+        \vskip1ex
+        \usebeamercolor{institute in headline}{\color{fg}\normalsize{\tdknimi}\\[1ex]}
+        \usebeamercolor{institute in headline}{\color{fg}\normalsize{\tdknamn}\\[1ex]}
+        \usebeamercolor{institute in headline}{\color{fg}\normalsize{\tdkname}\\[1ex]}
+      \end{column}
+
+      \begin{column}{.05\paperwidth}
+      \end{column}
+    \end{columns}
   \end{beamercolorbox}
-  \vskip0pt%
-  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
-%    \rule{0pt}{2pt}
-  \end{beamercolorbox}
+  \vskip2ex%
 }
 
 
