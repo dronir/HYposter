@@ -1,0 +1,296 @@
+\ProvidesPackage{beamerthemeHYposter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\DeclareOption{mat}{
+	\colorlet{TDK}{Mat}
+	\renewcommand{\tdknimi}{MATEMAATTIS-LUONNONTIETEELLINEN TIEDEKUNTA}
+	\renewcommand{\tdknamn}{MATEMATISK-NATURVETENSKAPLIGA FAKULTETEN}
+	\renewcommand{\tdkname}{FACULTY OF SCIENCE}
+	\renewcommand{\flame}{flame_mat.pdf}
+}
+
+\DeclareOption{hum}{
+	\colorlet{TDK}{Hum}
+	\renewcommand{\tdknimi}{HUMANISTINEN TIEDEKUNTA}
+	\renewcommand{\tdknamn}{HUMANISTISKA FAKULTETEN}
+	\renewcommand{\tdkname}{FACULTY OF ARTS}
+	\renewcommand{\flame}{flame_hum.pdf}
+}
+
+\DeclareOption{teo}{
+	\colorlet{TDK}{Teo}
+	\renewcommand{\tdknimi}{TEOLOGINEN TIEDEKUNTA}
+	\renewcommand{\tdknamn}{TEOLOGISKA FAKULTETEN}
+	\renewcommand{\tdkname}{FACULTY OF THEOLOGY}
+	\renewcommand{\flame}{flame_teo.pdf}
+}
+
+\DeclareOption{oik}{
+	\colorlet{TDK}{Oik}
+	\renewcommand{\tdknimi}{OIKEUSTIETEELLINEN TIEDEKUNTA}
+	\renewcommand{\tdknamn}{JURIDISKA FAKULTETEN}
+	\renewcommand{\tdkname}{FACULTY OF LAW}
+	\renewcommand{\flame}{flame_oik.pdf}
+}
+
+\DeclareOption{med}{
+	\colorlet{TDK}{Med}
+	\renewcommand{\tdknimi}{LÄÄKETIETEELLINEN TIEDEKUNTA}
+	\renewcommand{\tdknamn}{MEDICINSKA FAKULTETEN}
+	\renewcommand{\tdkname}{FACULTY OF MEDICINE}
+	\renewcommand{\flame}{flame_laa.pdf}
+}
+
+\DeclareOption{val}{
+	\colorlet{TDK}{Val}
+	\renewcommand{\tdknimi}{VALTIOTIETEELLINEN TIEDEKUNTA}
+	\renewcommand{\tdknamn}{STATVETENSKAPLIGA FAKULTETEN}
+	\renewcommand{\tdkname}{FACULTY OF SOCIAL SCIENCES}
+	\renewcommand{\flame}{flame_val.pdf}
+}
+
+\DeclareOption{maa}{
+	\colorlet{TDK}{Maa}
+	\renewcommand{\tdknimi}{MAATALOUS-METSÄTIETEELLINEN TIEDEKUNTA}
+	\renewcommand{\tdknamn}{AGRIKULTUR-FORSTVETENSKAPLIGA FAKULTETEN}
+	\renewcommand{\tdkname}{FACULTY OF AGRICULTURE AND FORESTRY}
+	\renewcommand{\flame}{flame_maa.pdf}
+}
+
+\DeclareOption{ell}{
+	\colorlet{TDK}{Ell}
+	\renewcommand{\tdknimi}{ELÄINLÄÄKETIETEELLINEN TIEDEKUNTA}
+	\renewcommand{\tdknamn}{VETERINÄRMEDICINSKA FAKULTETEN}
+	\renewcommand{\tdkname}{FACULTY OF VETERINARY MEDICINE}
+	\renewcommand{\flame}{flame_ell.pdf}
+}
+
+\DeclareOption{bio}{
+	\colorlet{TDK}{Bio}
+	\renewcommand{\tdknimi}{BIO- JA YMPÄRISTÖTIETEELLINEN TIEDEKUNTA}
+	\renewcommand{\tdknamn}{BIO- OCH MILJÖVETENSKAPLIGA FAKULTETEN}
+	\renewcommand{\tdkname}{FACULTY OF BIOLOGICAL AND ENVIRONMENTAL SCIENCES}
+	\renewcommand{\flame}{flame_bio.pdf}
+}
+
+\DeclareOption{far}{
+	\colorlet{TDK}{Far}
+	\renewcommand{\tdknimi}{FARMASIAN TIEDEKUNTA}
+	\renewcommand{\tdknamn}{FARMACEUTISKA FAKULTETEN}
+	\renewcommand{\tdkname}{FACULTY OF PHARMACY}
+	\renewcommand{\flame}{flame_far.pdf}
+}
+
+\DeclareOption{kay}{
+	\colorlet{TDK}{Kay}
+	\renewcommand{\tdknimi}{KÄYTTÄYTYMISTIETEELLINEN TIEDEKUNTA}
+	\renewcommand{\tdknamn}{BETEENDEVETENSKAPLIGA FAKULTETEN}
+	\renewcommand{\tdkname}{FACULTY OF BEHAVIOURAL SCIENCES}
+	\renewcommand{\flame}{flame_kay.pdf}
+}
+
+\DeclareOption{soc}{
+	\colorlet{TDK}{Soc}
+	\renewcommand{\tdknimi}{SVENSKA SOCIAL- OCH KOMMUNALHÖGSKOLAN}
+	\renewcommand{\tdknamn}{SWEDISH SCHOOL OF SOCIAL SCIENCE}
+	\renewcommand{\tdkname}{IF YOU CAN SEE THIS, SOMETHING IS WRONG}
+	\setbeamercolor{last institute line}{fg=white}
+	\renewcommand{\flame}{flame_soc.pdf}
+}
+
+\selectcolormodel{rgb}
+\mode<presentation>
+
+
+
+\definecolor{grey55}{rgb}{0.55, 0.55, 0.55}  %  title grey
+\definecolor{Mat}{rgb}{0.99, 0.64, 0.07}  %  matemaattis-luonnontieteellinen
+\definecolor{Hum}{rgb}{0.23, 0.46, 0.77}  %  humanistinen
+\definecolor{Teo}{rgb}{0.57, 0.35, 0.78}  %  teologinen
+\definecolor{Oik}{rgb}{0.70, 0.00, 0.29}  %  oikis
+\definecolor{Med}{rgb}{0.00, 0.64, 0.60}  %  lääkis
+\definecolor{Val}{rgb}{0.90, 0.02, 0.23}  %  valtsika
+\definecolor{Maa}{rgb}{0.00, 0.69, 0.55}  %  lehmä- ja mehtätieteellinen
+\definecolor{Ell}{rgb}{0.00, 0.62, 0.38}  %  eläinlääkis
+\definecolor{Bio}{rgb}{0.36, 0.75, 0.13}  %  bio- ja ympäristö
+\definecolor{Far}{rgb}{0.00, 0.74, 0.62}  %  farmasia
+\definecolor{Kay}{rgb}{0.99, 0.82, 0.09}  %  käyttis
+\definecolor{Soc}{rgb}{0.90, 0.20, 0.46}  %  sockom
+
+\newcommand{\flame}{flame.pdf}
+\newcommand{\tdknimi}{\mbox{}}
+\newcommand{\tdknamn}{\mbox{}}
+\newcommand{\tdkname}{\mbox{}}
+\colorlet{TDK}{black}
+
+\newcommand{\titlestart}[1]{\newcommand{\inserttitlestart}{#1}}
+\newcommand{\titleend}[1]{\newcommand{\inserttitleend}{#1}}
+
+
+
+\title{\inserttitlestart~\inserttitleend}
+
+\setbeamercolor{last institute line}{fg=TDK}
+
+
+\ProcessOptions\relax
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% headline colors and fonts
+\setbeamercolor{headline}{fg=black,bg=white}
+\setbeamercolor{title in headline}{fg=TDK}
+\setbeamercolor{author in headline}{fg=black}
+\setbeamercolor{institute in headline}{fg=TDK}
+\setbeamercolor{logo in headline}{fg=black,bg=white}
+
+% lines
+%\setbeamercolor{upper separation line head}{fg=ta2orange}
+\setbeamercolor{separation line}{bg=black}
+
+% footline colors and fonts
+\setbeamercolor{footline}{fg=TDK,bg=white}
+\setbeamerfont{footline}{fg=TDK,size=\normalsize}
+
+% poster background, body colors, and fonts
+\setbeamercolor*{normal text}{fg=black,bg=white}
+
+% block environment
+\setbeamercolor*{block body}{bg=white,fg=black}
+\setbeamercolor*{block title}{fg=TDK,bg=white}
+\setbeamerfont{block title}{size=\large,series=\bf}
+
+% example environment
+\setbeamercolor*{example title}{fg=TDK,bg=white}
+\setbeamerfont{example title}{size=\large,series=\bf,bg=white,fg=TDK}
+
+%\setbeamercolor*{example body}{fg=white,bg=i6colorscheme4}
+%\setbeamercolor*{example title}{fg=white,bg=i6colorscheme1}
+
+%  \setbeamercolor{framesubtitle}{fg=ta3orange, bg=ta2gray}
+%  \setbeamercolor{author in head/foot}{fg=tabutter, bg=black}
+%  \setbeamercolor{title in head/foot}{bg=tabutter, fg=black}
+
+\setbeamercolor{alerted text}{fg=TDK}
+
+\setbeamercolor{grey title}{fg=grey55,bg=white}
+\setbeamercolor{faculty title}{fg=grey55,bg=white}
+
+%\setbeamercolor{example text}{fg=taorange}
+%\setbeamercolor{structure}{fg=ta3skyblue}
+
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{block begin}{
+  \vskip.75ex
+  \begin{beamercolorbox}[ht=3ex,dp=1ex,center,rounded=false,shadow=false,leftskip=1cm,colsep*=.75ex]{block title}%
+    \usebeamerfont*{block title}\insertblocktitle
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body}%
+\setlength{\parskip}{1.5ex}
+  \begin{beamercolorbox}[rounded=false,shadow=false,leftskip=1cm,colsep*=.75ex,sep=2ex,vmode]{block body}%
+    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+  }
+
+
+\setbeamertemplate{block end}{
+  \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}{  
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \begin{columns}[T]
+		\begin{column}{0.05\paperwidth}
+		\end{column}
+      \begin{column}{.20\paperwidth}
+        \vskip15ex
+        \includegraphics[width=0.18\paperwidth]{\flame}
+       
+
+      \end{column}
+      \begin{column}{.70\paperwidth}
+        \vskip20ex
+        \raggedleft
+        \usebeamercolor{grey title}{\color{fg}\normalsize{HELSINGIN YLIOPISTO}\\[1ex]}
+        \usebeamercolor{grey title}{\color{fg}\normalsize{HELSINGFORS UNIVERSITET}\\[1ex]}
+        \usebeamercolor{grey title}{\color{fg}\normalsize{UNIVERSITY OF HELSINKI}\\[1ex]}     
+        \usebeamercolor{institute in headline}{\color{fg}\normalsize{\tdknimi}\\[1ex]}
+        \usebeamercolor{institute in headline}{\color{fg}\normalsize{\tdknamn}\\[1ex]}
+        \usebeamercolor{last institute line}{\color{fg}\normalsize{\tdkname}\\[1ex]}
+      \end{column}
+
+      \begin{column}{.05\paperwidth}
+      \end{column}
+    \end{columns}
+
+\vskip10ex
+\end{beamercolorbox}
+
+\begin{beamercolorbox}[wd=\paperwidth]{title and author}
+\begin{columns}{b}
+	\begin{column}[b]{.05\paperwidth} % filler
+	\end{column}
+
+	% TITLE
+	\begin{column}{0.6\paperwidth}
+		\usebeamercolor{title in headline}{\color{fg}\veryHuge{\inserttitlestart}}\\
+		\usebeamercolor{grey title}{\color{fg}\veryHuge{\inserttitleend}}
+	\end{column}
+
+	% AUTHOR LIST
+	\begin{column}[b]{0.4\paperwidth}
+		\vfill
+		\usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}}
+	\end{column}
+
+	\begin{column}{.05\paperwidth} % filler
+	\end{column}
+\end{columns}
+\end{beamercolorbox}
+
+\vskip1ex
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+    \rule{0pt}{2pt}
+  \end{beamercolorbox}
+\vskip10ex
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+    \rule{0pt}{2pt}
+  \end{beamercolorbox}
+  
+  \leavevmode%
+  \begin{beamercolorbox}[ht=4ex,leftskip=1cm,rightskip=1cm]{footline}%
+    \insertinstitute
+    \hfill
+    \url{}
+    \hfill
+    \texttt{}
+    \vskip1ex
+  \end{beamercolorbox}
+  \vskip0pt%
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
+    \rule{0pt}{2pt}
+  \end{beamercolorbox}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<all>
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-PDF-mode: t
+%%% TeX-master: "poster"
+%%% End: 

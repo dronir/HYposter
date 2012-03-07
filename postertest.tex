@@ -1,0 +1,31 @@
+\documentclass[portrait, a0paper]{baposter}
+
+\definecolor{orange}{rgb}{0.99, 0.64, 0.07}
+
+\begin{document}
+	\begin{poster}
+		{% keyvalues
+		background=plain,
+		bgColorOne=white,
+		headerColorOne=orange,
+		headershade=plain,
+		boxshade=none,
+		headerborder=none,
+		textborder=none,
+		borderColor=white,
+		} 
+		{LOL} % eyecatcher
+		{The best poster evar} % title
+		{Olli Wilkman} % authors
+		{LOL} logo
+		
+		\headerbox{Introduction}{name=intro, row=0, column=0}
+			{This is the introduction\ldots}
+			
+		\headerbox{Details}{below=intro}
+			{This gives some details, put a pretty picture here, maybe.}
+		
+
+		
+	\end{poster}
+\end{document}
