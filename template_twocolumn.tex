@@ -1,0 +1,82 @@
+\documentclass[final]{beamer}
+\mode<presentation> {
+  \usetheme[mat]{HYposter}
+}
+
+% STEP 1:
+% Change colours on line 3 by setting \usetheme[<id>]{HYposter}.
+% The different ids are:
+%  maa: Faculty of Agriculture and Forestry 
+%  hum: Faculty of Arts 
+%  kay: Faculty of Behavioural Sciences 
+%  bio: Faculty of Biological and Environmental Sciences 
+%  oik: Faculty of Law 
+%  med: Faculty of Medicine 
+%  far: Faculty of Pharmacy 
+%  mat: Faculty of Science 
+%  val: Faculty of Social Sciences 
+%  teo: Faculty of Theology 
+%  ell: Faculty of Veterinary Medicine 
+%  soc: Swedish School of Social Science 
+%  kir: University of Helsinki Library
+%  avo: Open University
+%  ale: Aleksanteri Institute
+%  neu: Neuroscience Institute
+%  biot: Bioscience Institute
+%  atk: Computer centre
+%  rur: Ruralia Institute
+%  koe: Laboratory animal centre
+%  kol: Collegium for Advanced Studies
+%  til: Center for Properties and Facilities
+%  pal: Palmenia
+%  kie: Language centre
+% Without options a black theme without faculty name will be used.
+
+% STEP 2: Change the next line according to your language
+\usepackage[english]{babel}
+
+% STEP 3: Make sure this character encoding matches the one you save this file as
+% (this template is utf8 by default but your editor may change it, causing problems)
+\usepackage[utf8]{inputenc}
+
+% You probably don't need to touch the following four lines
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amsthm, amssymb, latexsym}
+\usepackage[orientation=portrait,size=a0,scale=1.4]{beamerposter}
+
+% STEP 4: Set up the title and author info
+\titlestart{Title starts coloured} % first line of title
+\titleend{and continues grey} % second line of title
+\author{Author Name}
+\leftcorner{}% Stuff, such as logos, that goes in the lower left corner can be put here
+
+% Do not change the next four lines
+\begin{document}
+\begin{frame}[t, fragile]
+\begin{columns}[T]
+\column{0.05\paperwidth}
+
+% First column
+\column{0.45\paperwidth}
+
+% STEP 5: Add the contents of your poster in blocks
+\begin{block}{Block heading here}
+This is a block of content. Copy this block definition around and add your text, figure and such inside it. The columns are determined manually, so if the column grows too long, it flows outside the page instead of wrapping to the next column. It's your responsibility to make sure 
+\end{block}
+
+
+
+% Second column
+\column{0.45\paperwidth}
+
+\begin{block}{Another block}
+This is the first block of the second column.
+\end{block}
+	
+
+% Do not change things below this line
+\column{0.05\paperwidth} 
+\end{columns}
+\end{frame}
+\end{document}
