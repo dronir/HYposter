@@ -228,6 +228,9 @@
 \newcommand{\insertleftcorner}{}
 \newcommand{\leftcorner}[1]{\renewcommand{\insertleftcorner}{#1}}
 
+\newcommand{\inserttitlesize}{\veryHuge}
+\newcommand{\titlesize}[1]{\renewcommand{\inserttitlesize}{#1}}
+
 \title{\inserttitlestart~\inserttitleend}
 
 \graphicspath{{./flames/}}
@@ -297,8 +300,9 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This is the title part
-\setbeamertemplate{headline}{  
+\setbeamertemplate{headline}{%
 \leavevmode%
+
 \begin{beamercolorbox}[wd=\paperwidth]{headline}
 	\vskip5ex
 	\hskip0.05\paperwidth
@@ -313,8 +317,10 @@
 
 	% TITLE
 	\begin{column}[b]{0.6\paperwidth}
-		\usebeamercolor{title in headline}{\color{fg}\veryHuge{\MakeUppercase{\inserttitlestart}}}\\
-		\usebeamercolor{grey title}{\color{fg}\veryHuge{\MakeUppercase{\inserttitleend}}}
+		\raggedright
+		\usebeamercolor{title in headline}{\color{fg}\inserttitlesize{\MakeUppercase{\inserttitlestart}}}\\
+		\vspace{1ex}
+		\usebeamercolor{grey title}{\color{fg}\inserttitlesize{\MakeUppercase{\inserttitleend}}}
 	\end{column}
 
 	% AUTHOR LIST
