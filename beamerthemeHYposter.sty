@@ -283,7 +283,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setbeamertemplate{block begin}{
-	\vskip5ex%
+	\vskip3ex%
 	\begin{beamercolorbox}[ht=0ex,dp=1ex,center,rounded=false,shadow=false,leftskip=0ex,rightskip=0pt plus 4em, colsep*=.75ex]{block title}%
 		\usebeamerfont*{block title}\MakeUppercase{\insertblocktitle}
 	\end{beamercolorbox}%
@@ -319,15 +319,16 @@
 	\begin{column}[b]{0.6\paperwidth}
 		\raggedright
 		\usebeamercolor{title in headline}{\color{fg}\inserttitlesize{\MakeUppercase{\inserttitlestart}}}\\
-		\vspace{1ex}
+		\vspace{2ex}
 		\usebeamercolor{grey title}{\color{fg}\inserttitlesize{\MakeUppercase{\inserttitleend}}}
 	\end{column}
 
 	% AUTHOR LIST
 	\begin{column}[b]{0.3\paperwidth}
-		\raggedleft
-		 \renewcommand{\baselinestretch}{2}
+		\raggedright
 		\usebeamercolor{author in headline}{\color{fg}\normalsize{\insertauthor}}
+		\vskip5ex
+		\usebeamercolor{author in headline}{\color{fg}\footnotesize{\insertinstitute}}
 	\end{column}
 
 	\begin{column}{.05\paperwidth} % filler
@@ -339,7 +340,7 @@
   \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
     \rule{0pt}{2pt}
   \end{beamercolorbox}
-\vskip5ex
+%\vskip5ex
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
