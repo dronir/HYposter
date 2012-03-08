@@ -1,6 +1,6 @@
 \documentclass[final]{beamer}
 \mode<presentation> {
-  \usetheme[mat]{HYposter}
+  \usetheme[soc]{HYposter}
 }
 
 % Change colours on line 3 by setting \usetheme[<id>]{HYposter}.
@@ -41,17 +41,19 @@
 % Set up the title and author info
 \titlestart{Pretty Posters With \LaTeX}
 \titleend{Using the HYposter Style}
-\author[Wilkman]{Olli Wilkman,\\ Someone Else\\ and Someone Yet Different}
+\author[Wilkman]{Olli Wilkman}
 \leftcorner{}
 \date{\today}
 
+ \usefonttheme[onlymath]{serif}
 
 \begin{document}
 \begin{frame}[t, fragile]
 \begin{columns}[T]
+\column{0.05\paperwidth}
 	
 % First column starts here
-\begin{column}{0.32\linewidth}
+\column{0.3\paperwidth}
 
 
 \begin{block}{\LaTeX~posters made easier}
@@ -76,10 +78,9 @@ The layout of the official poster and this example is three-column, but the numb
 The headers should be in FULL CAPS to conform with the university style, this is done automatically.
 \end{block}
 
-\end{column}
 
 % Second column starts here
-\begin{column}{0.32\linewidth}
+\column{0.3\paperwidth}
 
 % First block
 \begin{block}{Versatility}
@@ -125,9 +126,7 @@ HYposter is hosted at Github for ease of development and cooperation. Get it at 
 
 
 % Third column
-\end{column}
-
-\begin{column}{0.32\linewidth}
+\column{0.3\paperwidth}
 
 \begin{block}{Example 1: math}
 	You can use all the nice math features of \LaTeX~in your poster:
@@ -167,8 +166,8 @@ There are many things that still don't work quite as well as I'd like. The math 
 Contributions and comments are always welcome. Contribute on Github or send email to \url{olli.wilkman@iki.fi}.
 \end{block}
 	
-\end{column}
-
+\column{0.05\paperwidth}
 \end{columns}
 \end{frame}
+
 \end{document}

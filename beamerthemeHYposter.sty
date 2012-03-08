@@ -257,7 +257,7 @@
 % block environment
 \setbeamercolor*{block body}{bg=white,fg=black}
 \setbeamercolor*{block title}{fg=TDK,bg=white}
-\setbeamerfont{block title}{size=\large,series=\bf}
+\setbeamerfont{block title}{size=\LARGE,series=\bf}
 
 % example environment
 \setbeamercolor*{example title}{fg=TDK,bg=white}
@@ -279,12 +279,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setbeamertemplate{block begin}{
 	\vskip5ex%
-	\begin{beamercolorbox}[ht=3ex,dp=1ex,center,rounded=false,shadow=false,leftskip=1ex,rightskip=0pt plus 4em, colsep*=.75ex]{block title}%
+	\begin{beamercolorbox}[ht=3ex,dp=1ex,center,rounded=false,shadow=false,leftskip=0ex,rightskip=0pt plus 4em, colsep*=.75ex]{block title}%
 		\usebeamerfont*{block title}\MakeUppercase{\insertblocktitle}
 	\end{beamercolorbox}%
 	{\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
 	\usebeamerfont{block body}%
-	\begin{beamercolorbox}[rounded=false,shadow=false,leftskip=1cm,colsep*=.75ex,sep=1ex,vmode]{block body}%
+	\begin{beamercolorbox}[rounded=false,shadow=false,leftskip=0cm,rightskip=0pt plus 4em,colsep*=.75ex,sep=0ex,vmode]{block body}%
 	\setlength{\parskip}{1.5ex}%
 	\ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}%
 }
@@ -363,9 +363,9 @@
 %  \end{beamercolorbox}
   
   \leavevmode%
-  \begin{beamercolorbox}[ht=6ex,leftskip=1cm,rightskip=1cm]{footline}%
+  \begin{beamercolorbox}[ht=6ex]{footline}%
     \begin{columns}[b]
-      \begin{column}[b]{0.02\paperwidth}
+      \begin{column}[b]{0.05\paperwidth}
       \end{column}
       \begin{column}[b]{.20\paperwidth}
       \insertleftcorner
