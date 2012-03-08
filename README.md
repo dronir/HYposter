@@ -32,7 +32,7 @@ A version which allows eps logos is on the todo-list.
 
 ## Installation
 
-You can use HYposter either by keeping the `beamerthemeHYposter.sty` file in the
+You can use HYposter simply by keeping the `beamerthemeHYposter.sty` file in the
 directory where you are working, and keeping the flame logo(s) you need in a
 subdirectory called `flames`.
 
