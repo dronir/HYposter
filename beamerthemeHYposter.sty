@@ -303,13 +303,6 @@
 \setbeamertemplate{headline}{%
 \leavevmode%
 
-\begin{beamercolorbox}[wd=\paperwidth]{headline}
-	\vskip5ex
-	\hskip0.05\paperwidth
-	\includegraphics[width=0.125\paperwidth]{\flame}
-	\vskip5ex
-\end{beamercolorbox}
-
 \begin{beamercolorbox}[wd=\paperwidth]{title and author}
 \begin{columns}{b}
 	\begin{column}[b]{.05\paperwidth} % filler
@@ -317,6 +310,9 @@
 
 	% TITLE
 	\begin{column}[b]{0.6\paperwidth}
+		\vskip5ex
+		\includegraphics[width=0.125\paperwidth]{\flame}\\
+		\vskip5ex
 		\raggedright
 		\usebeamercolor{title in headline}{\color{fg}\inserttitlesize{\MakeUppercase{\inserttitlestart}}}\\
 		\vspace{2ex}
