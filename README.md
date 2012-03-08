@@ -2,6 +2,7 @@
 
 This is a style file for `beamerposter` whose purpose is to simplify the process
 of making scientific posters that have a University of Helsinki look with LaTeX.
+HYposter tries to look like the "tighter" version of the official poster style.
 
 `beamerposter` is a LaTeX package which uses `beamer` for typesetting posters.
 
@@ -28,3 +29,39 @@ A version which allows eps logos is on the todo-list.
 [beamer]: https://bitbucket.org/rivanvx/beamer/wiki/Home
 [beamerposter]: http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php
 [official graphics repository]: http://hy.logodomain.com/
+
+## Installation
+
+You can use HYposter either by keeping the `beamerthemeHYposter.sty` file in the
+directory where you are working, and keeping the flame logo(s) you need in a
+subdirectory called `flames`.
+
+The preferred method is to add the style to your LaTeX distribution so that
+it is usable everywhere. The specific way to do this depends on your system.
+Do this manually by copying `beamerthemeHYposter.sty` to a directory called
+`texmf/tex/latex/beamerposter/` and putting the flame graphics in
+`texmf/tex/latex/beamerposter/flames/`. The location of the `texmf`
+directory depends on your system. You may need to run `texhash` or something
+to make LaTeX find it after this.
+
+Note that if you have installed `beamerposter` properly, then `beamerposter.sty`
+should also be in `texmf/tex/latex/beamerposter/`.
+
+On Mac OS X and the MacTeX distribution the `texmf` directory is `~/Library/texmf/` 
+and one does not need to rehash anything.
+
+Pro option: If you want to mess around with the style yourself, I suggest forking
+the project on Github, cloning it to some suitable directory and adding symlinks 
+to the file in `texmf/tex/latex/beamerposter`.
+
+## Usage
+
+Once you have beamerposter and the template set up in your LaTeX installation,
+using HYposter is fairly straightforward. Open one of the supplied templates (either
+two- or three-column), and follow the five steps given in the template:
+
+1. Choose the colour scheme.
+2. Select your language.
+3. Check that the file encoding is correct.
+4. Fill in the title of your poster and your name
+5. Add the contents of your poster as `block` environments.
