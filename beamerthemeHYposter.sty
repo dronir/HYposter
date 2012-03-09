@@ -4,7 +4,10 @@
 % Olli Wilkman 2012
 % Free to adapt and modify
 
+\mode<presentation>
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set up theme options
 
 \DeclareOption{mat}{
 	\colorlet{TDK}{Mat}
@@ -186,9 +189,7 @@
 	\renewcommand{\tdkname}{PALMENIA CENTRE FOR CONTINUING EDUCATION}
 }
 
-
 \selectcolormodel{rgb}
-\mode<presentation>
 
 \definecolor{grey55}{RGB}{140, 140, 140}  %  title grey
 \definecolor{Mat}{RGB}{252, 163, 17}  %  matemaattis-luonnontieteellinen
@@ -242,21 +243,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % headline colors and fonts
 \setbeamercolor{headline}{fg=black,bg=white}
-\setbeamercolor{title in headline}{fg=TDK}
+\setbeamercolor{title coloured}{fg=TDK}
+\setbeamercolor{title grey}{fg=grey55,bg=white}
 \setbeamercolor{author in headline}{fg=black}
-\setbeamercolor{institute in headline}{fg=TDK}
+
+\setbeamercolor{institute in footline}{fg=TDK}
 \setbeamercolor{logo in headline}{fg=black,bg=white}
 
 \setbeamercolor{frame title}{fg=TDK,bg=white}
-\setbeamercolor{grey title}{fg=grey55,bg=white}
+
 
 % lines
 %\setbeamercolor{upper separation line head}{fg=ta2orange}
 \setbeamercolor{separation line}{bg=black}
 
 % footline colors and fonts
-\setbeamercolor{footline}{fg=TDK,bg=white}
-\setbeamerfont{footline}{fg=TDK,size=\normalsize}
+\setbeamercolor{footline}{fg=black,bg=white}
+\setbeamerfont{footline}{fg=black,size=\normalsize}
 
 % poster background, body colors, and fonts
 \setbeamercolor*{normal text}{fg=black,bg=white}
@@ -273,15 +276,19 @@
 \setbeamercolor{alerted text}{fg=TDK}
 
 \setbeamercolor{faculty title}{fg=grey55,bg=white}
+
+\setbeamertemplate{itemize items}[triangle]
 \setbeamercolor{itemize item}{fg=TDK,bg=white}
+\setbeamercolor{enumerate item}{fg=TDK,bg=white}
+\setbeamercolor{description item}{fg=TDK,bg=white}
 
 \setbeamercolor{caption name}{fg=TDK,bg=white}
 \setbeamertemplate{caption}[numbered]
 
-\setbeamertemplate{itemize items}[triangle]
 \setbeamertemplate{navigation symbols}{}  % no navigation on a poster
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Setting up a text block
 \setbeamertemplate{block begin}{
 	\vskip3ex%
 	\begin{beamercolorbox}[ht=0ex,dp=1ex,center,rounded=false,shadow=false,leftskip=0ex,rightskip=0pt plus 4em, colsep*=.75ex]{block title}%
@@ -314,9 +321,9 @@
 		\includegraphics[width=0.125\paperwidth]{\flame}\\
 		\vskip3ex
 		\raggedright
-		\usebeamercolor{title in headline}{\color{fg}\inserttitlesize{\MakeUppercase{\inserttitlestart}}}\\
+		\usebeamercolor{title coloured}{\color{fg}\inserttitlesize{\MakeUppercase{\inserttitlestart}}}\\
 		\vspace{2ex}
-		\usebeamercolor{grey title}{\color{fg}\inserttitlesize{\MakeUppercase{\inserttitleend}}}
+		\usebeamercolor{title grey}{\color{fg}\inserttitlesize{\MakeUppercase{\inserttitleend}}}
 	\end{column}
 
 	% AUTHOR LIST
@@ -333,20 +340,16 @@
 \end{beamercolorbox}
 
 \vskip3ex
-  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
-    \rule{0pt}{2pt}
+  \begin{beamercolorbox}[wd=\paperwidth]{line}
+\hskip0.05\paperwidth\rule{0.90\paperwidth}{2pt}
   \end{beamercolorbox}
 %\vskip5ex
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setbeamertemplate{footline}{
-%  \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
-%   \rule{0pt}{2pt}
-%  \end{beamercolorbox}
-  
+\setbeamertemplate{footline}{  
   \leavevmode%
-  \begin{beamercolorbox}[ht=6ex]{footline}%
+  \begin{beamercolorbox}[ht=6ex, wd=\paperwidth]{footline}
     \begin{columns}[b]
       \begin{column}[b]{0.05\paperwidth}
       \end{column}
@@ -355,13 +358,13 @@
       \end{column}
       \begin{column}[b]{.70\paperwidth}
         \raggedleft
-        \usebeamercolor{grey title}{\color{fg}\normalsize{HELSINGIN YLIOPISTO}\\[1ex]}
-        \usebeamercolor{grey title}{\color{fg}\normalsize{HELSINGFORS UNIVERSITET}\\[1ex]}
-        \usebeamercolor{grey title}{\color{fg}\normalsize{UNIVERSITY OF HELSINKI}\\[1ex]}     
+        \usebeamercolor{title grey}{\color{fg}\footnotesize{HELSINGIN YLIOPISTO}\\[1ex]}
+        \usebeamercolor{title grey}{\color{fg}\footnotesize{HELSINGFORS UNIVERSITET}\\[1ex]}
+        \usebeamercolor{title grey}{\color{fg}\footnotesize{UNIVERSITY OF HELSINKI}\\[1ex]}     
         \vskip1ex
-        \usebeamercolor{institute in headline}{\color{fg}\normalsize{\tdknimi}\\[1ex]}
-        \usebeamercolor{institute in headline}{\color{fg}\normalsize{\tdknamn}\\[1ex]}
-        \usebeamercolor{institute in headline}{\color{fg}\normalsize{\tdkname}\\[1ex]}
+        \usebeamercolor{institute in footline}{\color{fg}\footnotesize{\tdknimi}\\[1ex]}
+        \usebeamercolor{institute in footline}{\color{fg}\footnotesize{\tdknamn}\\[1ex]}
+        \usebeamercolor{institute in footline}{\color{fg}\footnotesize{\tdkname}\\[1ex]}
       \end{column}
 
       \begin{column}{.05\paperwidth}
