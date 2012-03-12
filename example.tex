@@ -1,7 +1,6 @@
 \documentclass[final]{beamer}
-\mode<presentation> {
-  \usetheme[soc]{HYposter}
-}
+\mode<presentation>
+\usetheme[mat]{HYposter}
 
 % Change colours on line 3 by setting \usetheme[<id>]{HYposter}.
 % The different ids are:
@@ -41,55 +40,56 @@
 % Set up the title and author info
 \titlestart{Pretty Posters With \LaTeX}
 \titleend{Using the HYposter Style}
-\author[Wilkman]{Olli Wilkman}
+\author{Olli Wilkman$^1$}
+\institute{$^1$Department of Physics, \url{olli.wilkman@iki.fi}}
 \leftcorner{}
-\date{\today}
 
- \usefonttheme[onlymath]{serif}
+\usefonttheme[onlymath]{serif}
 
 \begin{document}
-\begin{frame}[t, fragile]
-\begin{columns}[T]
-\column{0.05\paperwidth}
-	
-% First column starts here
-\column{0.3\paperwidth}
+\begin{poster}
 
+\newcolumn
 
-\begin{block}{\LaTeX~posters made easier}
+\section{\LaTeX~posters made easier}
 The \texttt{HYposter} style enables you to make scientific posters with a University of Helsinki look using  the \texttt{beamerposter} package for \LaTeX. 
 
-The official poster templates for the university are available only for Microsoft PowerPoint and Adobe InDesign, expensive pieces of software which are not easily available to all researchers. \LaTeX, on the other hand, is free and works on almost all computer systems commonly used. It also has superior capabilities in typesetting mathematical formulas.
-\end{block}
+The official poster templates for the university are available only for Microsoft PowerPoint and Adobe InDesign, expensive pieces of software which are not easily available. \LaTeX, on the other hand, is free and works on almost all commonly used computer systems. It also has superior capabilities in typesetting mathematical formulas, which makes it popular among scientists.
 
 
-\begin{block}{The look}
-This poster style does not exactly conform to the official poster style of the university, but it tries to do a good enough job. The official poster style has a very large flame logo, and the header part takes up about a third of the page. This has been toned down a bit to save space.
+\section{The look}
+The university has two poster styles, that silly one with the gigantic logo and header taking up a third of the page, and the tighter one. This poster style tries to emulate the second one. Though it does not exactly conform to the official poster style of the university, but it tries to do a good enough job. 
 
-The background of the poster is white and the text is black. The block headings are in the faculty colour. The first line of the poster title is in the faculty colour and the rest in neutral grey. In the upper right the name of the university is set in neutral grey and the faculty name in the faculty colour.
+The background of the poster is white and the text is black. The block headings are in the faculty colour. The first line of the poster title is in the faculty colour and the rest in neutral grey. In the lower right corner the name of the university is set in neutral grey and the faculty name in the faculty colour.
+Some space for things such as logos of cooperating or supporting institutes is provided in the lower left.
 
-The layout of the official poster and this example is three-column, but the number of columns is variable. See the documentation of \texttt{beamer} for more details about columns.
-\end{block}
+The layout of the official poster and this example is three-column, but you can also use two columns.
 
-
-\begin{block}{Using the package}
-\texttt{HYposter} is a style definition for \texttt{beamerposter}, which itself is a package that uses the \texttt{beamer} document class to produce posters. This means you need to install both \texttt{beamer} and \texttt{beamerposter} in order it to work.
-
-The headers should be in FULL CAPS to conform with the university style, this is done automatically.
-\end{block}
+It is not possible to use the university's official fonts, not least because of the rather strict license they come under. However, the sans-serif font used here is a reasonable replacement.
 
 
-% Second column starts here
-\column{0.3\paperwidth}
+\section{Using the package}
+\texttt{HYposter} is a style definition for \texttt{beamerposter}, which itself is a package that uses the \texttt{beamer} document class to produce posters. This means you need both \texttt{beamer} and \texttt{beamerposter} in order it to work. Most modern \LaTeX~distributions already come with \texttt{beamer}, and installing the rest is not a problem.
 
-% First block
-\begin{block}{Versatility}
-This is the cool part: the poster can be rendered in any of the university's colour themes. It also automatically changes the name of the faculty or department in the header. Everything happens under the hood, and the user does not need to worry about the appearance of the poster at all, only the contents.
+Note that due to some radical redesigns, this style is not compatible with any other \texttt{beamerposter} style, that is, if you write a poster using this style, you cannot simply change the style to another one.
+
+See the \texttt{README} and \texttt{INSTALL} files for more details about installation and usage of the package (though they assume a basic knowledge of \LaTeX).
+
+
+
+
+\newcolumn
+
+\section{Versatility}
+This is the cool part: the poster supports \emph{all} of the university's different colour themes. It also automatically changes the name of the faculty or department in the lower right corner. Everything happens under the hood, and the user does not need to worry about the appearance of the poster at all, only the contents.
 
 The style supports all of the university's different faculties and special departments which have an official colour scheme.
-\end{block}
 
-\begin{block}{The colour options}
+
+\section{The colour options}
+
+The colour scheme of the following faculties and departments is supported. This is a comprehensive list of all the official color schemes defined for our university.
+
 \begin{itemize}
 \item Faculty of Agriculture and Forestry 
 \item Faculty of Arts 
@@ -117,39 +117,39 @@ The style supports all of the university's different faculties and special depar
 \item University of Helsinki Library
 \item None (plain black and white)
 \end{itemize}
-\end{block}
-
-\begin{block}{Where can I find it?}
-HYposter is hosted at Github for ease of development and cooperation. Get it at \url{https://github.com/dronir/HYposter}.
-\end{block}
 
 
+\section{Can I help?}
+There are things that still don't work quite as well as I'd like. The math fonts don't seem to always scale properly, and I have been so far unable to fix this.
 
-% Third column
-\column{0.3\paperwidth}
+Contributions and comments are always welcome. Contribute on Github or send email to \url{olli.wilkman@iki.fi}.
 
-\begin{block}{Example 1: math}
-	You can use all the nice math features of \LaTeX~in your poster:
 
-	\begin{equation}
-		f(x) = \frac{1}{2}\left(\frac{1}{1+x} + 1\right)
-	\end{equation}	
+\newcolumn
 
-	Unfortunately right now there are still some problems with the scaling of the math fonts:
+\section{Example 1: math}
+You can more or less use all the nice math features of \LaTeX~in your poster:
 
-	\begin{equation}
-		\sum_{n=0}^\infty \frac{1}{2^n} = 2
-	\end{equation}
+\begin{equation}
+	f(x) = \frac{1}{2}\left(\frac{1}{1+x} + 1\right)
+\end{equation}
+
+\begin{equation}
+	P_3(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3
+\end{equation}
+
+Unfortunately right now there are still some problems with the scaling of the math fonts:
+
+\begin{equation}
+	\sum_{n=0}^\infty \frac{1}{2^n} = 2
+\end{equation}
+
+
+
+\section{Example 2: Images and References}
+Including images is simple.  With pdf\LaTeX, you can use images in many common formats, including PNG and JPEG, though in a poster you should strive to use scaleable graphics, for example in PDF format. Due to a limitation of pdf\LaTeX, EPS graphics do not work, but they can be converted to PDF.
 	
-
-
-\end{block}
-	
-	
-\begin{block}{Example 2: Images and References}
-Including images is simple.  With pdf\LaTeX, you can use images in many common formats, including PNG and JPEG, but in a poster you should strive to use scaleable graphics by putting them in pdf format.
-	
-Using labels to refer to figures and tables is also simple, as demonstrated by this reference to Figure \ref{examplefigure}.
+Using labels to refer to figures and tables also works like it should, as demonstrated by these references to Figure \ref{examplefigure} and Table \ref{tableexample}.
 
 \begin{figure}
 \includegraphics[width=0.8\textwidth]{zeros.png}
@@ -158,16 +158,28 @@ Using labels to refer to figures and tables is also simple, as demonstrated by t
 \end{figure}
 
 Image courtesy of Janne Korhonen.
-\end{block}
 
-\begin{block}{Can I help?}
-There are many things that still don't work quite as well as I'd like. The math fonts don't seem to always scale properly, and I haven't figured out how to format the author names nicely yet. Also the spacing between the block headers and text paragraphs is a bit odd.
 
-Contributions and comments are always welcome. Contribute on Github or send email to \url{olli.wilkman@iki.fi}.
-\end{block}
-	
-\column{0.05\paperwidth}
-\end{columns}
-\end{frame}
+\section{Example 3: Tabulated table}
 
+Table environments work, too.
+
+\begin{table}
+	\begin{tabular*}{0.5\textwidth}{@{\extracolsep{\fill}} c|r|r|r }
+		$x$ & $x^2$ & $x^3$ & $x^4$\\
+		\hline
+		1 &  1 &   1 &   1 \\
+		2 &  4 &   8 &  16 \\
+		3 &  9 &  27 &  81 \\
+		4 & 16 &  64 & 256 \\
+		5 & 25 & 125 & 625 \\
+	\end{tabular*}
+	\caption{Some natural numbers and their first few powers.\label{tableexample}}
+\end{table}
+
+\section{Where can I find it?}
+HYposter is hosted at Github for ease of development and cooperation. Get it at \url{https://github.com/dronir/HYposter}.
+
+
+\end{poster}
 \end{document}
