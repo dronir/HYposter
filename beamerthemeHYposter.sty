@@ -1,5 +1,6 @@
 \ProvidesPackage{beamerthemeHYposter}[2012/03/09 beamerposter extension for University of Helsinki]
 \RequirePackage{ifthen}
+
 % HYposter beamer theme for producing posters with University of Helsinki visual style
 % Olli Wilkman 2012
 % Free to adapt and modify
@@ -14,7 +15,7 @@
 	\renewcommand{\tdknimi}{MATEMAATTIS-LUONNONTIETEELLINEN TIEDEKUNTA}
 	\renewcommand{\tdknamn}{MATEMATISK-NATURVETENSKAPLIGA FAKULTETEN}
 	\renewcommand{\tdkname}{FACULTY OF SCIENCE}
-	\renewcommand{\flame}{flame_mat.pdf}
+	\renewcommand{\flame}{./flames/flame_mat.pdf}
 }
 
 \DeclareOption{hum}{
@@ -22,7 +23,7 @@
 	\renewcommand{\tdknimi}{HUMANISTINEN TIEDEKUNTA}
 	\renewcommand{\tdknamn}{HUMANISTISKA FAKULTETEN}
 	\renewcommand{\tdkname}{FACULTY OF ARTS}
-	\renewcommand{\flame}{flame_hum.pdf}
+	\renewcommand{\flame}{./flames/flame_hum.pdf}
 }
 
 \DeclareOption{teo}{
@@ -30,7 +31,7 @@
 	\renewcommand{\tdknimi}{TEOLOGINEN TIEDEKUNTA}
 	\renewcommand{\tdknamn}{TEOLOGISKA FAKULTETEN}
 	\renewcommand{\tdkname}{FACULTY OF THEOLOGY}
-	\renewcommand{\flame}{flame_teo.pdf}
+	\renewcommand{\flame}{./flames/flame_teo.pdf}
 }
 
 \DeclareOption{oik}{
@@ -38,7 +39,7 @@
 	\renewcommand{\tdknimi}{OIKEUSTIETEELLINEN TIEDEKUNTA}
 	\renewcommand{\tdknamn}{JURIDISKA FAKULTETEN}
 	\renewcommand{\tdkname}{FACULTY OF LAW}
-	\renewcommand{\flame}{flame_oik.pdf}
+	\renewcommand{\flame}{./flames/flame_oik.pdf}
 }
 
 \DeclareOption{med}{
@@ -46,7 +47,7 @@
 	\renewcommand{\tdknimi}{LÄÄKETIETEELLINEN TIEDEKUNTA}
 	\renewcommand{\tdknamn}{MEDICINSKA FAKULTETEN}
 	\renewcommand{\tdkname}{FACULTY OF MEDICINE}
-	\renewcommand{\flame}{flame_laa.pdf}
+	\renewcommand{\flame}{./flames/flame_laa.pdf}
 }
 
 \DeclareOption{val}{
@@ -54,7 +55,7 @@
 	\renewcommand{\tdknimi}{VALTIOTIETEELLINEN TIEDEKUNTA}
 	\renewcommand{\tdknamn}{STATVETENSKAPLIGA FAKULTETEN}
 	\renewcommand{\tdkname}{FACULTY OF SOCIAL SCIENCES}
-	\renewcommand{\flame}{flame_val.pdf}
+	\renewcommand{\flame}{./flames/flame_val.pdf}
 }
 
 \DeclareOption{maa}{
@@ -62,7 +63,7 @@
 	\renewcommand{\tdknimi}{MAATALOUS-METSÄTIETEELLINEN TIEDEKUNTA}
 	\renewcommand{\tdknamn}{AGRIKULTUR-FORSTVETENSKAPLIGA FAKULTETEN}
 	\renewcommand{\tdkname}{FACULTY OF AGRICULTURE AND FORESTRY}
-	\renewcommand{\flame}{flame_maa.pdf}
+	\renewcommand{\flame}{./flames/flame_maa.pdf}
 }
 
 \DeclareOption{ell}{
@@ -70,7 +71,7 @@
 	\renewcommand{\tdknimi}{ELÄINLÄÄKETIETEELLINEN TIEDEKUNTA}
 	\renewcommand{\tdknamn}{VETERINÄRMEDICINSKA FAKULTETEN}
 	\renewcommand{\tdkname}{FACULTY OF VETERINARY MEDICINE}
-	\renewcommand{\flame}{flame_ell.pdf}
+	\renewcommand{\flame}{./flames/flame_ell.pdf}
 }
 
 \DeclareOption{bio}{
@@ -78,7 +79,7 @@
 	\renewcommand{\tdknimi}{BIO- JA YMPÄRISTÖTIETEELLINEN TIEDEKUNTA}
 	\renewcommand{\tdknamn}{BIO- OCH MILJÖVETENSKAPLIGA FAKULTETEN}
 	\renewcommand{\tdkname}{FACULTY OF BIOLOGICAL AND ENVIRONMENTAL SCIENCES}
-	\renewcommand{\flame}{flame_bio.pdf}
+	\renewcommand{\flame}{./flames/flame_bio.pdf}
 }
 
 \DeclareOption{far}{
@@ -86,7 +87,7 @@
 	\renewcommand{\tdknimi}{FARMASIAN TIEDEKUNTA}
 	\renewcommand{\tdknamn}{FARMACEUTISKA FAKULTETEN}
 	\renewcommand{\tdkname}{FACULTY OF PHARMACY}
-	\renewcommand{\flame}{flame_far.pdf}
+	\renewcommand{\flame}{./flames/flame_far.pdf}
 }
 
 \DeclareOption{kay}{
@@ -94,7 +95,7 @@
 	\renewcommand{\tdknimi}{KÄYTTÄYTYMISTIETEELLINEN TIEDEKUNTA}
 	\renewcommand{\tdknamn}{BETEENDEVETENSKAPLIGA FAKULTETEN}
 	\renewcommand{\tdkname}{FACULTY OF BEHAVIOURAL SCIENCES}
-	\renewcommand{\flame}{flame_kay.pdf}
+	\renewcommand{\flame}{./flames/flame_kay.pdf}
 }
 
 \DeclareOption{soc}{
@@ -102,7 +103,7 @@
 	\renewcommand{\tdknimi}{SVENSKA SOCIAL- OCH KOMMUNALHÖGSKOLAN}
 	\renewcommand{\tdknamn}{SWEDISH SCHOOL OF SOCIAL SCIENCE}
 	\renewcommand{\tdkname}{\mbox{}}
-	\renewcommand{\flame}{flame_soc.pdf}
+	\renewcommand{\flame}{./flames/flame_soc.pdf}
 }
 
 \DeclareOption{ale}{
@@ -225,7 +226,7 @@
 \definecolor{Til}{RGB}{94, 160, 63}  %  tilakeskus
 \definecolor{Kir}{RGB}{163, 175, 7}  %  kirjasto
 
-\newcommand{\flame}{flame.pdf}
+\newcommand{\flame}{./flames/flame.pdf}
 \newcommand{\tdknimi}{\mbox{}}
 \newcommand{\tdknamn}{\mbox{}}
 \newcommand{\tdkname}{\mbox{}}
@@ -241,8 +242,6 @@
 \newcommand{\titlesize}[1]{\renewcommand{\inserttitlesize}{#1}}
 
 \title{\inserttitlestart~\inserttitleend}
-
-\graphicspath{{./flames/}}
 
 % Boolean which tells whether there is an open 'block' environment
 \newboolean{inblock}
@@ -275,7 +274,12 @@
 % Process options given to the package
 \ProcessOptions\relax
 
-  
+
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % headline colors and fonts
 \setbeamercolor{headline}{fg=black,bg=white}
