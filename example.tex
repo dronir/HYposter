@@ -34,6 +34,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
+\usepackage{exscale}
 \usepackage{amsmath,amsthm, amssymb, latexsym}
 \usepackage[orientation=portrait,size=a0,scale=1.4]{beamerposter}
 
@@ -44,7 +45,7 @@
 \institute{$^1$Department of Physics, \url{olli.wilkman@iki.fi}}
 \leftcorner{}
 
-\usefonttheme[onlymath]{serif}
+%\usefonttheme[onlymath]{serif}
 
 \begin{document}
 \begin{poster}
@@ -120,6 +121,8 @@ The colour scheme of the following faculties and departments is supported. This 
 
 
 \section{Can I help?}
+There are still various issues with the style. There are some problems with math fonts which I haven't been able to solve to my satisfaction.
+
 Contributions and comments are always welcome. Contribute on Github or send email to \url{olli.wilkman@iki.fi}.
 
 
@@ -129,11 +132,11 @@ Contributions and comments are always welcome. Contribute on Github or send emai
 You can more or less use all the nice math features of \LaTeX~in your poster:
 
 \begin{equation}
-	f(x) = \frac{1}{2}\left(\frac{1}{1+x} + 1\right)
+	\int_{-\infty}^{\infty} \frac{1}{\sqrt{2 \pi \sigma^2}} \exp\left(-\frac{(x - \mu)^2}{2 \sigma^2}} \right) dx = 1
 \end{equation}
 
 \begin{equation}
-	P_3(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3
+	P(x) = \left\{ \begin{array}{lr} \frac{1}{6}x(x-1)&,\; 0 \leq x \leq 1 \\ 0, & \text{otherwise}  \end{array} \right.
 \end{equation}
 
 \begin{equation}
