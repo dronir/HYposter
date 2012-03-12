@@ -37,8 +37,7 @@ LaTeX distribution) to re-index the texmf directory so that LaTeX knows where to
 look for the packages.
 
 If you have Mac OS X and the MacTeX distribution, the `texmf` directory for user
-packages is `~/Library/texmf/` and one does not need to rehash anything. With
-other LaTeX distributions.
+packages is `~/Library/texmf/` and one does not need to rehash anything.
 
 ## The power user way
 
