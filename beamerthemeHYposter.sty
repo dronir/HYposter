@@ -1,5 +1,5 @@
-\ProvidesPackage{beamerthemeHYposter}
-
+\ProvidesPackage{beamerthemeHYposter}[2012/03/09 beamerposter extension for University of Helsinki]
+\RequirePackage{ifthen}
 % HYposter beamer theme for producing posters with University of Helsinki visual style
 % Olli Wilkman 2012
 % Free to adapt and modify
@@ -189,6 +189,14 @@
 	\renewcommand{\tdkname}{PALMENIA CENTRE FOR CONTINUING EDUCATION}
 }
 
+\DeclareOption{twocolumn}{
+	\renewcommand{\insertcolumnwidth}{0.45\paperwidth}
+}
+
+\DeclareOption{threecolumn}{
+	\renewcommand{\insertcolumnwidth}{0.294\paperwidth}
+}
+
 \selectcolormodel{rgb}
 
 \definecolor{grey55}{RGB}{140, 140, 140}  %  title grey
@@ -236,7 +244,35 @@
 
 \graphicspath{{./flames/}}
 
+% Boolean which tells whether there is an open 'block' environment
+\newboolean{inblock}
+\setboolean{inblock}{false}
 
+\newcommand{\insertcolumnwidth}{0.294\paperwidth}
+
+% Command to start a new column, ending open block if one exists
+\newcommand{\newcolumn}{\ifthenelse{\boolean{inblock}}{\end{block}}{}\column{\insertcolumnwidth}}
+
+% Set up all environments so the user doesn't have to
+\newenvironment{poster}
+{
+\begin{frame}[t, fragile, environment=poster]
+\begin{columns}[T]\column{0.05\paperwidth}
+}
+{
+\ifthenelse{\boolean{inblock}}{\end{block}}{}
+\column{0.05\paperwidth}\end{columns} 
+\end{frame} 
+}
+
+% Command to start a new block, ending open block if one exists
+\renewcommand{\section}[1]{%
+\ifthenelse{\boolean{inblock}}{\end{block}}{}
+\setboolean{inblock}{true}
+\begin{block}{#1}
+}
+
+% Process options given to the package
 \ProcessOptions\relax
 
   
