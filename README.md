@@ -93,4 +93,4 @@ have an empty space; any more, and the additionsl columns will go outside the pa
 There are still various issues that could be better. If you have any suggestions or problems,
 use the issue tracker for this project on Github, or [email me].
 
-[email me]: olli.wilkman@iki.fi
+[email me]: mailto:olli.wilkman@iki.fi
