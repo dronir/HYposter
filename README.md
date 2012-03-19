@@ -8,6 +8,7 @@ HYposter tries to look like the "tighter" version of the official poster style.
 
 HYposter is based on the Icy theme by Philippe Dreuw, although diverging rapidly.
 
+
 ## Requirements
 
 LaTeX with [beamer] and [beamerposter]. Most modern LaTeX installations come with
@@ -51,8 +52,8 @@ parts separately with the `\titlestart` and `\titleend` commands.
 
 ### Authors
 
-Give the authors with the `\author` command, preferrably separating authors with
-commas and newlines.
+Give the authors with the `\author` command. These are put to the right side of the title
+in smaller black letters.
 
 ### Institute
 
@@ -85,3 +86,11 @@ The column width is fixed at the beginning by setting either `twocolumn` or `thr
 (or nothing, which defaults to `threecolumn`) in the \usetheme options. This means that
 you must use that number of `\newcolumn` commands to make the columns. Any less and you'll
 have an empty space; any more, and the additionsl columns will go outside the page.
+
+
+## Support
+
+There are still various issues that could be better. If you have any suggestions or problems,
+use the issue tracker for this project on Github, or [email me].
+
+[email me]: olli.wilkman@iki.fi
