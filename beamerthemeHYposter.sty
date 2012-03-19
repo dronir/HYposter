@@ -198,6 +198,10 @@
 	\renewcommand{\insertcolumnwidth}{0.294\paperwidth}
 }
 
+\DeclareOption{fourcolumn}{
+	\renewcommand{\insertcolumnwidth}{0.22\paperwidth}
+}
+
 \selectcolormodel{rgb}
 
 \definecolor{grey55}{RGB}{140, 140, 140}  %  title grey
@@ -299,7 +303,7 @@
 
 % footline colors and fonts
 \setbeamercolor{footline}{fg=black,bg=white}
-\setbeamerfont{footline}{fg=black,size=\normalsize}
+\setbeamerfont{footline}{size=\normalsize}
 
 % poster background, body colors, and fonts
 \setbeamercolor*{normal text}{fg=black,bg=white}
@@ -311,7 +315,7 @@
 
 % example environment
 \setbeamercolor*{example title}{fg=TDK,bg=white}
-\setbeamerfont{example title}{size=\large,series=\bf,bg=white,fg=TDK}
+\setbeamerfont{example title}{size=\large,series=\bf}
 
 \setbeamercolor{alerted text}{fg=TDK}
 
@@ -355,6 +359,10 @@
 	\begin{column}[b]{.05\paperwidth} % filler
 	\end{column}
 
+	% Typeset the title part differently based on orientation, this is a slightly
+	% quick hack, needs refinement
+	\if@beamerposter@portrait
+
 	% TITLE
 	\begin{column}[b]{0.6\paperwidth}
 		\vskip5ex
@@ -373,6 +381,32 @@
 		\vskip5ex
 		\usebeamercolor{author in headline}{\color{fg}\footnotesize{\insertinstitute}}
 	\end{column}
+
+
+	% If orientation is landscape, do this:
+	\else
+
+	% TITLE
+	\begin{column}[b]{0.13\paperwidth}
+		\vskip5ex
+		\includegraphics[width=0.1\paperwidth]{\flame}\\
+	\end{column}
+
+	\begin{column}[b]{0.47\paperwidth}
+		\raggedright
+		\usebeamercolor{title coloured}{\color{fg}\inserttitlesize{\MakeUppercase{\inserttitlestart}}}\\
+		\vspace{2ex}
+		\usebeamercolor{title grey}{\color{fg}\inserttitlesize{\MakeUppercase{\inserttitleend}}}
+	\end{column}
+
+	% AUTHOR LIST
+	\begin{column}[b]{0.3\paperwidth}
+		\raggedright
+		\usebeamercolor{author in headline}{\color{fg}\normalsize{\insertauthor}}
+		\vskip5ex
+		\usebeamercolor{author in headline}{\color{fg}\footnotesize{\insertinstitute}}
+	\end{column}
+	\fi
 
 	\begin{column}{.05\paperwidth} % filler
 	\end{column}

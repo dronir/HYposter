@@ -1,9 +1,25 @@
 \documentclass[final]{beamer}
 \mode<presentation>
-\usetheme[mat]{HYposter}
 
-% STEP 1:
-% Change colours on line 3 by setting \usetheme[<id>]{HYposter}.
+% STEP 1: Change the next line according to your language
+\usepackage[english]{babel}
+
+% STEP 2: Make sure this character encoding matches the one you save this file as
+% (this template is utf8 by default but your editor may change it, causing problems)
+\usepackage[utf8]{inputenc}
+
+% You probably don't need to touch the following four lines
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amsthm, amssymb, latexsym}
+\usepackage{exscale} % required to scale math fonts properly
+
+\usepackage[orientation=portrait,size=a0,scale=1.4]{beamerposter}
+
+
+% STEP 3:
+% Change colours by setting \usetheme[<id>, twocolumn]{HYposter}.
+\usetheme[mat, threecolumn]{HYposter}
 % The different ids are:
 %  maa: Faculty of Agriculture and Forestry 
 %  hum: Faculty of Arts 
@@ -31,19 +47,6 @@
 %  kie: Language centre
 % Without options a black theme without faculty name will be used.
 
-% STEP 2: Change the next line according to your language
-\usepackage[english]{babel}
-
-% STEP 3: Make sure this character encoding matches the one you save this file as
-% (this template is utf8 by default but your editor may change it, causing problems)
-\usepackage[utf8]{inputenc}
-
-% You probably don't need to touch the following four lines
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{amsmath,amsthm, amssymb, latexsym}
-\usepackage{exscale} % required to scale math fonts properly
-\usepackage[orientation=portrait,size=a0,scale=1.4]{beamerposter}
 
 % STEP 4: Set up the title and author info
 \titlestart{Title starts coloured} % first line of title
@@ -85,7 +88,7 @@ This is the first section of the second column. The widths of the columns are fi
 
 \section{Yet another section}
 This is the first section of the third column.
-
+	
 
 \end{poster}
 \end{document}
