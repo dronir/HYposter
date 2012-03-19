@@ -36,11 +36,12 @@ A version which allows eps logos is on the todo-list, but does not seem likely.
 
 Once you have beamerposter and the template set up in your LaTeX installation or
 working directory, using HYposter is fairly straightforward. Open one of the supplied
-templates (either two- or three-column), and follow the five steps given in the template:
+templates (either two- or three-column or landscape), and follow the five steps given
+in the template:
 
-1. Choose the colour scheme.
-2. Select your language.
-3. Check that the file encoding is correct.
+1. Select your language.
+2. Check that the file encoding is correct.
+3. Choose the colour scheme.
 4. Fill in the title of your poster and your name
 5. Add the contents of your poster
 
@@ -73,6 +74,11 @@ the `\titlesize` command to change the size. The default is `\titlesize{\VeryHug
 The best choice for a longer title is `\Huge`. If you need to go smaller than that,
 your title is probably too long for a poster, but you can try `\LARGE`.
 
+### Orientation
+
+You can set `orientation=landscape` in the `beamerposter` settings to make a landscape
+poster. The head part is typeset a bit differently to save space and look better.
+
 ### Column length
 
 The columns are essentially just vertical boxes. There is no wrapping over them,
@@ -82,10 +88,14 @@ fit the columns.
 
 ### Number of columns
 
-The column width is fixed at the beginning by setting either `twocolumn` or `threecolumn`
-(or nothing, which defaults to `threecolumn`) in the \usetheme options. This means that
-you must use that number of `\newcolumn` commands to make the columns. Any less and you'll
-have an empty space; any more, and the additionsl columns will go outside the page.
+The column width is fixed at the beginning by setting either `twocolumn`, `threecolumn`
+or `fourcolumn` (or nothing, which defaults to `threecolumn`) in the \usetheme options. 
+This means that you must use that number of `\newcolumn` commands to make the columns. 
+Any less and you'll have an empty space; any more, and the additionsl columns will go 
+outside the page. Four columns are really only meant for landscape orientation, they're
+too narrow on a portrait poster.
+
+
 
 
 ## Support
