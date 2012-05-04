@@ -9,6 +9,12 @@ working directory, and keeping the flame logo(s) you need in a subdirectory call
 If you also lack `beamerposter`, get the `beamerposter.sty` file from [here] and
 keep it in your working directory as well.
 
+**IMPORTANT:** Some LaTeX distributions include `beamerposter`, but a very
+old version (v1.07), which does not work with this poster style. 
+HYposter is guaranteed to work only with `beamerposter` v1.12!
+If you are getting cryptic "undefined control sequence" errors, you are likely
+to have a too old `beamerposter` version.
+
 This will of course only allow you to use the style with LaTeX documents located in
 that specific directory.
 
