@@ -12,8 +12,7 @@ keep it in your working directory as well.
 **IMPORTANT:** Some LaTeX distributions include `beamerposter`, but a very
 old version (v1.07), which does not work with this poster style. 
 HYposter is guaranteed to work only with `beamerposter` v1.12!
-If you are getting cryptic "undefined control sequence" errors, you are likely
-to have a too old `beamerposter` version.
+If your `beamerposter` is too old, you will get a warning like this: `LaTeX Warning: You have requested, on input line 3, version '2010/11/18' of package beamerposter, but only version '2008/03/11. v.1.07. beamerposter: latex-beamer poster extension' is available.`
 
 This will of course only allow you to use the style with LaTeX documents located in
 that specific directory.
