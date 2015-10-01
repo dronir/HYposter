@@ -1,3 +1,5 @@
+**NOTE: This poster template is retired in favour of [a totally rewritten version](https://github.com/dronir/NewHYposter), though it is still under developement and this one does some things (like landscape orientation) better.**
+
 # HYposter - LaTeX posters for University of Helsinki
 
 HYposter is a style file for `beamerposter` whose purpose is to simplify the process
